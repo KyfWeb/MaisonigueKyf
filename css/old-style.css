@@ -1,0 +1,61 @@
+.section-slider {
+  position: relative;
+  height: 80vh; /* ou 100vh si tu veux plein écran */
+  background-image: url("../img/slider-soudure.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-content {
+  text-align: center;
+  color: #fff;
+  max-width: 80rem;
+}
+
+.slider-subheading {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  margin-bottom: 1.2rem;
+  color: #fdf2e9;
+}
+
+.slider-heading {
+  font-size: 4.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 2.4rem;
+}
+
+.slider-description {
+  font-size: 1.8rem;
+  margin-bottom: 3.2rem;
+  color: #eee;
+}
+
+.slider-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #f07a18;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
