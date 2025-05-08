@@ -43,7 +43,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a class="main-nav-link" href="index.html">Home</a>
+            <a class="main-nav-link" href="index-en.html">Home</a>
           </li>
           <li>
             <a class="main-nav-link" href="#maisonigue">Maison Igué</a>
@@ -156,7 +156,8 @@
         </div>
       </section>
 
-      <section class="section-hero" id="maisonigue">
+      <div  id="maisonigue" style="height:30px;"></div>
+      <section class="section-hero">
         <div class="hero">
           <!-- Bloc texte -->
           <div class="hero-text-box">
@@ -174,29 +175,43 @@
 
           <!-- Bloc slider image -->
           <div class="hero-img-box">
-            <div class="mini-slider-wrapper">
-              <div class="mini-slider">
-                <div class="mini-slide active">
-                  <img src="img/210521218.jpg" alt="Slide 1" />
-                </div>
-                <div class="mini-slide">
-                  <img src="img/210521229.jpg" alt="Slide 2" />
-                </div>
-                <div class="mini-slide">
-                  <img src="img/210521230.jpg" alt="Slide 3" />
-                </div>
-                <div class="mini-slide">
-                  <img src="img/210521234.jpg" alt="Slide 4" />
-                </div>
+
+  <!-- MON SLIDE -->
+            <div class="slideshow-container">
+
+              <div class="mySlides fade">
+                <div class="numbertext">1 / 4</div>
+                <img src="img/210521218.jpg" style="width:100%">
               </div>
-              <button class="slider-arrow left-arrow">&#10094;</button>
-              <button class="slider-arrow right-arrow">&#10095;</button>
+
+              <div class="mySlides fade">
+                <div class="numbertext">2 / 4</div>
+                <img src="img/210521229.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">3 / 4</div>
+                <img src="img/210521230.jpg" style="width:100%">
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/210521234.jpg" style="width:100%">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
+   
+          
           </div>
         </div>
       </section>
 
-      <section class="section-chiffres" id="leconcept">
+
+
+      <div  id="leconcept" style="height:30px;"></div>
+      <section class="section-chiffres" id="">
         <div class="container chiffres-grid">
           <!-- Bloc droit : chiffres clés -->
           <div class="chiffres-content">
@@ -253,7 +268,8 @@
         </div>
       </section>
 
-      <section class="section-clients" id="lacheffe">
+      <div  id="lacheffe" style="height:30px;"></div>
+      <section class="section-clients" id="">
         <div class="container clients-grid">
           <!-- Bloc gauche : image avec overlay -->
           <div class="client-img-box">
@@ -278,7 +294,9 @@
           </div>
         </div>
       </section>
-      <section class="section-experiences-flip" id="cours">
+
+      <div  id="cours" style="height:30px;"></div>
+      <section class="section-experiences-flip" id="">
         <div class="container">
           <!--<span class="subheading" style="text-align: center">Maison Igué</span>-->
           <h2
@@ -496,7 +514,7 @@ North America.
       </section>
     </main>
     <footer class="footer">
-      <div class="container grid grid--footer">
+      <div class="container grid grid--footer padding_footer">
         <div class="logo-col">
           <a href="#" class="footer-logo"
             ><img
@@ -508,7 +526,7 @@ North America.
             La Maison Igué is a range of gourmet delicatessen products, gluten-free breads and cakes created by the cheffe.
           </p>
         </div>
-
+        <div class="container container-footer">
         <nav class="nav-col">
           <p class="footer-heading">Useful links</p>
           <ul class="footer-nav">
@@ -546,22 +564,9 @@ North America.
             </li>
           </ul>
         </div>
-        <!--<nav class="nav-col">
-          <p class="footer-heading">Contact</p>
-          <ul class="footer-nav">
-            <li><a href="#" class="footer-link">About INT3D</a></li>
-            <li><a href="#" class="footer-link">For Business</a></li>
-            <li><a href="#" class="footer-link">Our partners</a></li>
-            <li><a href="#" class="footer-link">Careers</a></li>
-          </ul>
-        </nav>-->
-        <!--<nav class="nav-col">
-          <p class="footer-heading">La Cheffe</p>
-          <ul class="footer-nav">
-            <li><a href="#" class="footer-link">Call center</a></li>
-            <li><a href="#" class="footer-link">Privacy & terms</a></li>
-          </ul>
-        </nav>-->
+      </div>
+      
+
       </div>
       <div class="container grid grid-center-v">
         <p class="copyright">
@@ -570,6 +575,8 @@ North America.
         </p>
       </div>
     </footer>
+
+
     <script src="js/script.js"></script>
     <script
       type="module"
