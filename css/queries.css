@@ -63,48 +63,49 @@ Instead , 1rem = 1em = 16px */
 /********************************/
 @media (max-width: 68.75em) {
   .section-expertise {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-experience {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-clients {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-contact {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .footer {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-histoire {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-chiffres {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-all-expertises {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .section-experiences-flip {
-    padding-left: 4.8rem;
-    padding-right: 4.8rem;
+    
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .slider-description {
@@ -225,7 +226,7 @@ Instead , 1rem = 1em = 16px */
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.5s ease-in;
+  /*  transition: all 0.5s ease-in;*/
 
     /* HIDE NAVIGATION*/
     /*Allow NO transitions at all*/
@@ -280,7 +281,7 @@ Instead , 1rem = 1em = 16px */
   }
 
   .hero-text-box {
-    order: 2;
+    order: 1;
     padding-top: 2rem;
   }
 
@@ -383,7 +384,7 @@ Instead , 1rem = 1em = 16px */
   }
 
   .hero-text-box {
-    order: 2;
+    order: 1;
     padding-top: 2rem;
   }
 
@@ -593,7 +594,7 @@ Instead , 1rem = 1em = 16px */
   }
 
   .hero-text-box {
-    order: 2;
+    order: 1;
     padding-top: 2rem;
   }
 
@@ -631,7 +632,7 @@ Instead , 1rem = 1em = 16px */
   }
 
   .hero-text-box {
-    order: 2;
+    order: 1;
     padding-top: 2rem;
   }
 
@@ -790,4 +791,16 @@ Instead , 1rem = 1em = 16px */
     padding-left: 2rem;
     padding-right: 2rem;
   }
+}
+
+
+@media screen and (max-width:940px){
+  .container-footer 
+  {
+ width: 100% !important;display: table;
+  }
+.prev { left:10px !important; }
+.nav-col { float:left !important;width:40%;text-align:center; }
+.address-col { float:right !important;width:40%; }
+.padding_footer { margin-bottom:10px !important; }
 }
