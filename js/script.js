@@ -5,7 +5,7 @@ const currentYear = new Date().getFullYear();
 
 yearEl.textContent = currentYear;
 
-console.log(currentYear);
+/*console.log(currentYear);*/
 
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
@@ -29,12 +29,12 @@ const sectionHeroEl =
   document.querySelector(".section-slider") ||
   document.querySelector(".sticky-trigger");
 
-console.log("Thank You");
+/*console.log("Thank You");*/
 
 const obs = new IntersectionObserver(
   function (entries) {
     const ent = entries[0];
-    console.log(ent);
+    /*console.log(ent);*/
 
     if (ent.isIntersecting === false) {
       document.body.classList.add("sticky");
@@ -66,7 +66,7 @@ function checkFlexGap() {
   document.body.appendChild(flex);
   var isSupported = flex.scrollHeight === 1;
   flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+ /* console.log(isSupported);*/
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
@@ -74,56 +74,6 @@ checkFlexGap();
 
 // https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js
 
-/*
-.no-flexbox-gap .main-nav-list li:not(:last-child) {
-  margin-right: 4.8rem;
-}
-
-.no-flexbox-gap .list-item:not(:last-child) {
-  margin-bottom: 1.6rem;
-}
-
-.no-flexbox-gap .list-icon:not(:last-child) {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .delivered-faces {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .meal-attribute:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.no-flexbox-gap .meal-icon {
-  margin-right: 1.6rem;
-}
-
-.no-flexbox-gap .footer-row div:not(:last-child) {
-  margin-right: 6.4rem;
-}
-
-.no-flexbox-gap .social-links li:not(:last-child) {
-  margin-right: 2.4rem;
-}
-
-.no-flexbox-gap .footer-nav li:not(:last-child) {
-  margin-bottom: 2.4rem;
-}
-
-@media (max-width: 75em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 3.2rem;
-  }
-}
-
-@media (max-width: 59em) {
-  .no-flexbox-gap .main-nav-list li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 4.8rem;
-  }
-}
-*/
 
 ///// SLIDER
 
@@ -140,19 +90,7 @@ function goToSlide(slide, transition = true) {
   slider.style.transform = `translateX(-${slide * 100}%)`;
 }
 
-/*function goToSlide(slide) {
-  slider.style.transform = `translateX(-${slide * 100}%)`;
-}
 
-btnRight.addEventListener("click", () => {
-  currentSlide = (currentSlide + 1) % maxSlide;
-  goToSlide(currentSlide);
-});
-
-btnLeft.addEventListener("click", () => {
-  currentSlide = (currentSlide - 1 + maxSlide) % maxSlide;
-  goToSlide(currentSlide);
-}); */
 
 // ➡️ Avancer
 btnRight.addEventListener("click", () => {
@@ -190,28 +128,31 @@ btnLeft.addEventListener("click", () => {
 // Initialisation
 goToSlide(currentSlide);
 
-/* Slider section la cheffe*/
-const aboutSliderContainer = document.querySelector(".mini-slider");
-const aboutSlides = document.querySelectorAll(".mini-slide");
-const aboutBtnLeft = document.querySelector(".left-arrow");
-const aboutBtnRight = document.querySelector(".right-arrow");
+    
+/* SLIDE PERSONNALISE */
+let slideIndex = 1;
+showSlides(slideIndex);
 
-let aboutCurrentSlide = 0;
-const aboutMaxSlides = aboutSlides.length;
-
-function goToAboutSlide(slide) {
-  aboutSliderContainer.style.transform = `translateX(-${slide * 100}%)`;
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-aboutBtnRight.addEventListener("click", () => {
-  aboutCurrentSlide = (aboutCurrentSlide + 1) % aboutMaxSlides;
-  goToAboutSlide(aboutCurrentSlide);
-});
+function currentSlide1(n) {
+  showSlides(slideIndex = n);
+}
 
-aboutBtnLeft.addEventListener("click", () => {
-  aboutCurrentSlide = (aboutCurrentSlide - 1 + aboutMaxSlides) % aboutMaxSlides;
-  goToAboutSlide(aboutCurrentSlide);
-});
-
-// Initialisation
-goToAboutSlide(0);
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
