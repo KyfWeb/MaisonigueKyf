@@ -814,4 +814,12 @@ Instead , 1rem = 1em = 16px */
   .chiffres-box { padding:10% !important; }
 }
 
+/* Device_3 : Apple iPhone 3G & 3GS, Blackberry Bold, Samsung Galaxy ACE, LG Optimus One-with:480; */
+@media screen and (max-width:326){
+/*.chiffres-img { width:77% !important;border-radius:8px !important; }
+.chiffres-overlay { width:77% !important;border-radius:8px !important; }
+*/
+  .chiffres-box { padding:10px !important; }
+}
+
 
