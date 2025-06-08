@@ -245,14 +245,14 @@ body {
 .main-nav-list {
   list-style: none;
   display: flex;
-  gap: 3.2rem;
+  gap: 2.5rem;
 }
 
 .main-nav-link:link,
 .main-nav-link:visited {
   text-decoration: none;
   color: #fff;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 00;
   transition: all 0.3s;
   text-transform: uppercase;
